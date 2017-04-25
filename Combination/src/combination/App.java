@@ -13,19 +13,18 @@ public class App {
 		
 		if(checkingString(input)){
 		
-			System.out.println("!] Input N and R. ex) 5 4 ");
-			int n = scanner.nextInt();
+			System.out.println("!] Input R. ");
 			int r = scanner.nextInt();
 			scanner.nextLine();
 			
-			if(checkingInt(input.length(), n, r)){
+			if(checkingInt(input.length(), r)){
 				
 				char[] elements = input.toCharArray();
 				
 				Combination combination = new Combination(r);
 				
-				combination.runCombination(elements, n, r, r);
-				combination.printCombination();
+				combination.runCombination(elements, elements.length, r, r);
+				combination.printCombination(elements.length, r);
 				
 				System.out.println("!] Done.");
 			}
@@ -34,9 +33,9 @@ public class App {
 		
 	}
 
-	private static boolean checkingInt(int length, int n, int r) {
+	private static boolean checkingInt(int length, int r) {
 		
-		if(length >= r && length >= n && n >= r){
+		if(length >= r){
 			return true;
 		}
 		

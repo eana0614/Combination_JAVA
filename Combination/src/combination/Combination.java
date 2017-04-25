@@ -38,9 +38,9 @@ public class Combination {
 		combinationElement.add(t);
 	}
 
-	public void printCombination(){
+	public void printCombination(int n, int r){
 		
-		System.out.println("===== Result =====");
+		System.out.println("===== Result "+n+"C"+r+" =====");
 		for(int i=0; i<combinationElement.size(); i++){
 			System.out.println((i+1)+"th Combination Element = "+combinationElement.get(i));
 		}
